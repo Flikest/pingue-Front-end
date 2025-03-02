@@ -1,0 +1,30 @@
+nav{
+    display: flex;
+    border-radius: 5px;
+    width: 40vh;
+}
+
+.info p{
+    margin: 0;
+    padding: 0;
+}
+
+.info h4{
+    margin-top: 0;
+    padding: 0;
+}
+
+img{
+    border-radius: 50%;
+    margin: 7px;
+    width: 65px;
+    height: 65px;
+}
+
+.avatar-user{
+    border-radius: 50%;
+}
+
+nav:hover{
+    background-color: rgba(59, 59, 59, 0.486);
+}

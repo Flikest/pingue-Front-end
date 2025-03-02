@@ -1,0 +1,50 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  display: flex;
+}
+
+.chat-list{
+  display: flex;
+  margin-top: 55px;
+  flex-direction: column;
+  background-color: rgb(112, 124, 124);
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.chat-list::-webkit-scrollbar-thumb{
+  border-radius: 45px;
+}
+
+.chat-list::-webkit-scrollbar {
+  width: 10px; /* Ширина всего элемента навигации */
+}
+
+.chat-list::-webkit-scrollbar-track {
+  background: #ffffff00; /* Цвет дорожки */
+}
+
+.chat-list::-webkit-scrollbar-thumb {
+  background-color: #202020d0; /* Цвет бегунка */
+  border-radius: 20px; /* Округление бегунка */ /* Оформление границ бегунка */
+}
