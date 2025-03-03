@@ -1,3 +1,5 @@
+import { useState } from "react"
+import { io } from "socket.io-client";
 import "./bodyChat.css"
 
 interface Messages {
@@ -13,6 +15,27 @@ interface head {
 }
 
 function BodyChat(headProps: head){
+
+    const soket = io("ws://localhost:9000/chats/messenger/")
+
+    const [message, setMessage] = useState("")
+
+    soket.on("connect", () => {
+
+    })
+    soket.on("disconnect", () => {
+        
+    })
+
+    const handleChange = (event: any) => {
+        setMessage(event.target.value)
+    }
+
+    const sendMessage = () => {
+        console.log(message)
+    }
+    
+
     return (
         <div className="f-b">
             <header>
@@ -28,21 +51,12 @@ function BodyChat(headProps: head){
             </div>
 
             <div className="input-box">
-                <input className="msg-inp" type="text" />
-                <div className="back-send-img"><img className="send-img" src="https://cdn-icons-png.flaticon.com/512/6652/6652725.png" /></div>
+                <input className="msg-inp" type="text" value={message} onChange={handleChange}/>
+                <div className="back-send-img" onClick={sendMessage}><img className="send-img" src="https://cdn-icons-png.flaticon.com/512/6652/6652725.png" /></div>
             </div>
 
         </div>
     )
-}
-
-function sendmessage(){
-
-}
-
-
-function GetChat(chat_id: string){
-    
 }
 
 export default BodyChat

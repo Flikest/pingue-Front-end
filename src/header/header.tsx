@@ -9,7 +9,7 @@ function Head(){
 
             <div className="d6">
                 <form>
-                    <input type="text" placeholder="Искать здесь..."/>
+                    <input type="text" placeholder="Search"/>
                     <button type="submit"><img src="https://img.icons8.com/ios7/600/search.png" alt="" /></button>
                 </form>
             </div>
